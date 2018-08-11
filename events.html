@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
  <html class="no-js"> 
 	<head>
@@ -81,8 +82,8 @@
 						<ul class="sf-menu" id="fh5co-primary-menu">
 							<li><a href="index.html" >Home</a></li>
 							<li  class=""><a href="story.html">Our Story</a></li>
-							<li  class="active"><a href="events.html">Events</a></li>
-							<li class=""><a href="rsvp.html">RSVP</a></li>
+								<li  class="active"><a href="events.html">Events</a></li>
+							<li><a href="rsvp.html">RSVP</a></li>
 							<!--<li><a href="gallery.html">Gallery</a></li>-->
 							
 						</ul>
@@ -126,7 +127,7 @@
 								Ceremony | Cocktail Hour | Reception</br>
 								Ceremony in the Garden</br>
 								Cocktail Hour with Open Bar</br>
-								Reception with Dinner Buffet, Cake, Open Bar & Dancing</p>
+								Reception Dinner Buffet & Open Bar</p>
 								<p><strong>Attire</strong></br>
 	 							Please arrive in <a href="https://www.theknot.com/content/wedding-guest-attire-cheat-sheet">Formal</a> Attire,
 								</br>Black Tie Optional</p>
@@ -145,7 +146,13 @@
 						</div>
 					</div>
 				</div>
-				
+				<!--
+				<div class="row">
+					<div class="col-md-12">
+						<div id="map" class="fh5co-map"></div>
+					</div>
+				</div>
+				-->
 			</div>
 		</div>
 
@@ -162,10 +169,16 @@
 					<div class="col-md-10 col-md-offset-1">
 						<form class="form-inline">
 							<div class="col-md-2 col-sm-4">
-								
+								<!--<div class="form-group">
+									<label for="name" class="sr-only">Name</label>
+									<input type="name" class="form-control" id="name" placeholder="Name">
+								</div>-->
 							</div>
 							<div class="col-md-2 col-sm-4">
-								
+								<!--<div class="form-group">
+									<label for="email" class="sr-only">Email</label>
+									<input type="email" class="form-control" id="email" placeholder="Email">
+								</div>-->
 							</div>
 							<div class="col-md-4 col-sm-4">
 								<button type="submit" class="btn btn-primary btn-block" formaction="https://goo.gl/ytGxFj">I am Attending</button>
@@ -185,7 +198,14 @@
 							<h2>Maddy &amp; Jesse</h2>
 						</div>
 						<div class="col-md-6 col-md-offset-3 text-center">
-							
+							<!--<p class="fh5co-social-icons">
+								<a href="#"><i class="icon-twitter2"></i></a>
+								<a href="#"><i class="icon-facebook2"></i></a>
+								<a href="#"><i class="icon-instagram"></i></a>
+								<a href="#"><i class="icon-dribbble2"></i></a>
+								<a href="#"><i class="icon-youtube"></i></a>
+							</p>
+							-->
 							<p>Copyright 2019, All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by Maddy </p>
 						</div>
 					</div>
@@ -202,7 +222,46 @@
 	<!-- END fh5co-wrapper -->
 
 	
+	<!-- jQuery -->
+	<script src="dist/scripts.min.js"></script>
+	
+	<script type="text/javascript">
+    var locations = [
+      ['<h4>Wedding Venue</h4><p><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp<a href="https://www.google.com/maps/dir/Current+Location/Los+Angeles,+California"><strong>[Get Directions]</strong></p></a><p>Los Angeles, California<i class="fa fa-phone" aria-hidden="true"></i>&nbsp&nbsp', 34.0522, 118.2434, 5],
+	['<h4>Wedding Venue</h4><p><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp&nbsp<a href="https://www.google.com/maps/dir/Current+Location/Columbia+Maryland"><strong>[Get Directions]</strong></p></a><p>City, Maryland<i class="fa fa-phone" aria-hidden="true"></i>&nbsp&nbsp', 39.2037, 76.8610,5],
+	];
+
+var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 5,
+    scrollwheel: false,
+    center: new google.maps.LatLng(37.09024, -95.712891),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+});
+
+var infowindow = new google.maps.InfoWindow();
+
+var marker, i;
+
+for (i = 0; i < locations.length; i++) {
+    marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+    });
+
+    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+            infowindow.setContent(locations[i][0]);
+            infowindow.open(map, marker);
+        }
+    })(marker, i));
+}
+    </script>
+    
+    <!--	<audio autoplay loop>
+  <source src="sound/backsound.mp3" type="audio/ogg">
+  <source src="sound/backsound.mp3" type="audio/mpeg">
+	</audio> 
+    -->
 	
 	</body>
 </html>
-
