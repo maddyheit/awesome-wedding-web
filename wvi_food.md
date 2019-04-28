@@ -6,6 +6,7 @@ HORS D'OEUVRES
 
 
 SALAD
+
 Cucumber wrapped in baby greens with fennel
 
 ENTREES
