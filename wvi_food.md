@@ -22,5 +22,6 @@ SIDES
 2. Grilled green asparagus and carrots
 
 CHILDREN'S ENTREE
+
 Crispy golden battered chicken strips
 Served with steak fries
