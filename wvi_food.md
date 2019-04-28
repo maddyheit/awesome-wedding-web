@@ -2,7 +2,7 @@ HORS D'OEUVRES
 1. Pear and brie in phyello dough (Warm)
 2. Chicken satay with teriyaki sauce (Warm)
 3. Bruschetta crostini (Cold)
-4. Wild mushroom and fromage blanc crostini
+4. Wild mushroom and fromage blanc crostini (Cold)
 
 
 
