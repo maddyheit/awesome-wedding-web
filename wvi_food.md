@@ -5,9 +5,11 @@ HORS D'OEUVRES
 4. Wild mushroom and fromage blanc crostini
 
 
+
 SALAD
 
 Cucumber wrapped in baby greens with fennel
+
 
 ENTREES
 1. Grilled Salmon with a scallion pesto
